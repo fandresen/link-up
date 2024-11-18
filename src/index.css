@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px); /* Déplacer de 300px vers la droite */
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px); /* Déplacer de 300px vers la droite */
+  }
+}
+
+/* Appliquer l'animation avec un délai et une durée */
+.animate-move-right {
+  animation: moveToRight 1s ease-in-out forwards;
+}
+.animate-move-left {
+  animation: moveToLeft 1s ease-in-out forwards;
+}
