@@ -8,7 +8,7 @@ export interface PostT{
         name: string;
         profilePic: string;
     }
-    isValidate:boolean;
+    isValide:boolean;
 }
 
 export interface UserT{

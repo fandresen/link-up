@@ -10,7 +10,7 @@ export default function HomeUserContainer() {
   const handleNewPostSubmit = async ({title,description}:{title:string,description:string})=>{
     console.log({'title':title, 'description':description});
     try{
-      const res = await axios.post("/new-post",{'title':title, 'description':description});
+      const res = await axios.post("/post/new-post",{'title':title, 'description':description});
     }
     catch(e){
       console.log(e);  

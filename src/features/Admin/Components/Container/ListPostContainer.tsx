@@ -19,7 +19,7 @@ export default function ListPostContainer() {
   const handleValider = async (id:number)=>{
     setPostList(postList.filter((post:PostT) => post.id !== id));
     try {
-      await axios.post(`/post/valider-post/${id}`);
+      await axios.post(`/post/valider-post/id?=${id}`);
       fetchData();
     } catch (e) {
       console.log(e);
